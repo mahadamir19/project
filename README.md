@@ -1,3 +1,4 @@
+
 ## 📝 Project Overview
 This project is an automated **ETL (Extract, Transform, Load) Pipeline** designed to analyze the remote job market. 
 
@@ -29,9 +30,10 @@ The system follows a linear pipeline structure:
 ├── database.py         # SQL schema and storage functions
 ├── requirements.txt    # Project dependencies
 └── jobs.db             # SQLite database (stores the data)
+```
 
 I deployed the final app via streamlit at the following link:
-[![Streamlit App](https://8zanys3tsvgjbohnphpch2.streamlit.app/)
+[Streamlit App](https://8zanys3tsvgjbohnphpch2.streamlit.app/)
 
 ## 🔧 How to Run It on Your Own
 
@@ -41,9 +43,15 @@ If you want to run this project locally on your machine, follow these steps:
 ```bash
 git clone [https://github.com/mahadamir19/project.git](https://github.com/mahadamir19/project.git)
 cd project
+```
 
 ### 2. Install Dependencies
+```bash
 pip install -r requirements.txt
+```
 
 ### 3. Launch the dashboard
+```bash
 streamlit run app.py
+```
+
