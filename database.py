@@ -32,17 +32,24 @@ def load_all_jobs():
 
 if __name__ == "__main__":
     df = fetch_data_from_cleaner()
+
     # initialize_db()   # <--- run this once to setup the jobs table
     # insert_jobs(df)   # <--- run this to insert jobs from the pandas df
 
 
     # ----TESTING----
-    # conn = sqlite3.connect('jobs.db')
-    # cursor = conn.cursor()
+    # print(df['salary'].min())
+    # print(df['salary'].max())
+    # print(df['salary'].mean())
+
+    conn = sqlite3.connect('jobs.db')
+    cursor = conn.cursor()
 
     # cursor.execute("SELECT * FROM jobs WHERE salary > 100000 ORDER BY salary DESC")
+    # cursor.execute("SELECT COUNT(DISTINCT company) FROM jobs")
+    # cursor.execute("SELECT COUNT(DISTINCT title) FROM jobs")
 
-    # print(cursor.fetchall())
-    # print(len(cursor.fetchall()))
+    print(cursor.fetchall())
+    print(len(cursor.fetchall()))
 
-    # conn.close()
+    conn.close()
