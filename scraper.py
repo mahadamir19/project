@@ -39,6 +39,11 @@ def parse_html(html_text):
 
     return job_data
 
+def fetch_data_from_scraper():
+    text = get_html("https://realpython.github.io/fake-jobs/")
+    job_list = parse_html(text)
+    return job_list
+
 if __name__ == "__main__":
     text = get_html("https://realpython.github.io/fake-jobs/")
     job_list = parse_html(text)
