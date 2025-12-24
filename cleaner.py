@@ -6,7 +6,8 @@ def clean_salary(jobs):
     df['salary'] = df['salary'].str.replace('$', '')
     df['salary'] = df['salary'].str.replace(r'[kK]', '', regex=True).astype(float)
     df['salary'] = df['salary'] * 1000
-    print(df.head())
+    df['salary'] = df['salary'].astype(int)
+    df.drop_duplicates(inplace=True)
 
     return df
 
